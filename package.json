@@ -1,12 +1,15 @@
 {
   "name": "dynupdate",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS script for ovh.com dynamic DNS domain update",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["ovh.com","dyndns"],
+  "keywords": [
+    "ovh.com",
+    "dyndns"
+  ],
   "author": "tlissak",
   "license": "ISC",
   "dependencies": {}
