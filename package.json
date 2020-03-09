@@ -1,6 +1,6 @@
 {
-  "name": "dynupdate",
-  "version": "1.0.0",
+  "name": "ovhdynupdate",
+  "version": "1.0.2",
   "description": "NodeJS script for ovh.com dynamic DNS domain update",
   "main": "app.js",
   "scripts": {
@@ -12,5 +12,14 @@
   ],
   "author": "tlissak",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlissak/dynupdate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tlissak/dynupdate/issues"
+  },
+  "homepage": "https://github.com/tlissak/dynupdate#readme"
 }

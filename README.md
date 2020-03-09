@@ -1,28 +1,33 @@
 # dynupdate
 NodeJS script for ovh.com dynamic DNS domain update using simple interval
 
-it simply doing request to :
+it simply getting your external IPv4 and then calling ovh url with basic Auth:
 
- http://www.ovh.com/nic/update?system=dyndns&hostname=HOST&myip=IPV4
- 
- with basic Auth and with your external IPv4 address fetch from : http://ipv4.icanhazip.com
- 
- More usage information is on : 
+ http://www.ovh.com/nic/update?system=dyndns&hostname=YOU_HOST&myip=YOU_EXT_IPV4
+  
+ More information for ovh dynhost look at : 
  https://docs.ovh.com/fr/domains/utilisation-dynhost/
 
-Usage :
+Installation :
+```
+npm install ovhdynupdate
+```
+
+Usage in your index.js :
 
 ```
-let app = require('dynupdate');
+let app = require('ovhdynupdate');
 
 app.init({
-    interval:1000*60, // in MS update every 1 min
+    interval:1000*60*3 , // in MS update every 3 min
     domain:'sub.domain.com', 
-    auth : "domain.com-USER:YOURPASSWORD"
+    auth : "domain.com-USER:YOURPASSWORD",
+    //service_ipv4 : 'http://someserviceforipv4_remoteaddress.com' 
 }) ;
 ```
 
 result should have somthing like this in the console :
 ```
-2020-03-05T16:35:05.496Z nochg 88.125.212.23
+Init process for domain sub.domain.com auth : domain.com-sub:***** with interval 30000
+2020-03-05T16:35:05.496Z nochg 000.000.000.000
 ```
